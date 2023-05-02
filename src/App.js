@@ -1,22 +1,38 @@
-import CalendarComp from './components/Calendar.jsx'
-import DateRangeComp from './components/DateRange.jsx'
-import DateRangePickerComp from './components/DateRangePicker.jsx'
-
+// import Calendar from './components/Calendar.jsx'
+// import DateRange from './components/DateRange.jsx'
+// import DateRangePicker from './components/DateRangePicker.jsx'
 import './App.css'
+import React from "react";
+import {FormattedMessage} from 'react-intl';
+
 
 function App() {
+
   return (
-    <div className="App">
+    <div className="App"><header className="App-header">
+    <p>
+      <FormattedMessage
+      id = "app.header"
+      defaultMessage="Edit the files and save to reload"
+    />
+    </p>
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FormattedMessage
+        id = "app.content"
+        defaultMessage="Learn React"
+      />
 
-      <h4>Выбрать дату</h4>
-      <CalendarComp />
-
-      <h4>Выбрать временной диапазон</h4>
-      <DateRangeComp />
-
-      <h4>Временной диапазон</h4>
-      <DateRangePickerComp />
-
+    </a>
+    <FormattedMessage
+      id = "app.channel.plug"
+      defaultMessage="Tutorial brought to you by Medium"
+    />
+  </header>
     </div>
   );
 }
